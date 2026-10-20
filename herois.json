@@ -1,0 +1,35 @@
+[
+  {
+    "id": 101,
+    "nome": "Homem de Ferro",
+    "nomeReal": "Tony Stark",
+    "superpoder": "Armadura de alta tecnologia e genialidade",
+    "idade": 48,
+    "equipe": {
+      "id": 1,
+      "nome": "Vingadores"
+    }
+  },
+  {
+    "id": 102,
+    "nome": "Capitão América",
+    "nomeReal": "Steve Rogers",
+    "superpoder": "Força, agilidade e escudo de Vibranium",
+    "idade": 105,
+    "equipe": {
+      "id": 1,
+      "nome": "Vingadores"
+    }
+  },
+  {
+    "id": 103,
+    "nome": "Wolverine",
+    "nomeReal": "Logan",
+    "superpoder": "Fator de cura e garras de Adamantium",
+    "idade": 137,
+    "equipe": {
+      "id": 2,
+      "nome": "X-Men"
+    }
+  }
+]
