@@ -1,18 +1,17 @@
-package com.marvel.dto;
+package com.marvel.dtos;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class HeroiSaidaDTO {
-
     private Long id;
     private String nome;
-    private String alterEgo;
-    private String superPoder;
+    private String nomeReal;
+    private String ocupacao;
+    private String poderes;
+    private String inimigos;
+    private String filmes;
     private String imagemUrl;
+    private Long equipeId;
     private String nomeEquipe;
 }

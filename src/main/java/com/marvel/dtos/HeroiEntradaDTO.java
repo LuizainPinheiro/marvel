@@ -1,4 +1,4 @@
-package com.marvel.dto;
+package com.marvel.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

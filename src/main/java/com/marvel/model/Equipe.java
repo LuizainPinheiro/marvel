@@ -1,9 +1,8 @@
 package com.marvel.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_equipes")
@@ -16,9 +15,10 @@ public class Equipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
     private String nome;
+    private String origem;
+    private String imagemUrl;
 
-    private String baseOperacoes;
-    private String lider;
+    @OneToMany(mappedBy = "equipe", cascade = CascadeType.ALL)
+    private List<Heroi> herois;
 }

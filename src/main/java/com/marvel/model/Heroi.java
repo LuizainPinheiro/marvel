@@ -1,26 +1,29 @@
 package com.marvel.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Table(name = "tb_herois")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Heroi {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String nome;
+    private String nomeReal;
+    private String ocupacao;
 
-    private String alterEgo;
-    private String superPoder;
+    @Column(columnDefinition = "TEXT")
+    private String poderes;
+
+    @Column(columnDefinition = "TEXT")
+    private String inimigos;
+
+    @Column(columnDefinition = "TEXT")
+    private String filmes;
+
     private String imagemUrl;
 
     @ManyToOne

@@ -1,8 +1,7 @@
 package com.marvel.controller;
 
-import com.marvel.model.Equipe;
-import com.marvel.repository.EquipeRepository;
-import org.springframework.http.ResponseEntity;
+import com.marvel.dtos.EquipeSaidaDTO;
+import com.marvel.service.EquipeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,14 +11,19 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class EquipeController {
 
-    private final EquipeRepository equipeRepository;
+    private final EquipeService equipeService;
 
-    public EquipeController(EquipeRepository equipeRepository) {
-        this.equipeRepository = equipeRepository;
+    public EquipeController(EquipeService equipeService) {
+        this.equipeService = equipeService;
     }
 
     @GetMapping
-    public ResponseEntity<List<Equipe>> listarTodas() {
-        return ResponseEntity.ok(equipeRepository.findAll());
+    public List<EquipeSaidaDTO> listarTodas() {
+        return equipeService.listarTodas();
+    }
+
+    @GetMapping("/busca")
+    public EquipeSaidaDTO buscarPorNome(@RequestParam String nome) {
+        return equipeService.buscarPorNome(nome);
     }
 }
